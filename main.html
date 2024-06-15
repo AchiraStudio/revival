@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revival (Demo)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wide-screen">
+        <header class="header">
+            <a href="#main" class="logo">REVIVAL</a>
+
+            <div class="audio-controls" style="display: none;">
+                <i class="fa-solid fa-play" id="play-button" style="margin-right: 15px;"></i>
+                <i class="fa-solid fa-pause" id="pause-button" style="display: none; margin-right: 15px;"></i>
+                <div class="slider-container">
+                  <input type="range" id="time-slider" min="0" value="0">
+                  <span id="current-time">0:00</span>
+                </div>
+              </div>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#games">Competitions</a>
+                <a href="#tickets">Shop</a>
+                <a href="#footer">Contacts</a>
+            </nav>
+        </header>
+
+        <div id="main">
+            <h1 id="front">Revival</h1>
+            <h1 id="bg">Revival</h1>
+
+            <div class="button" onclick="redirectOnClick()">
+                <h1>Join The Show</h1>
+              </div>
+        </div>
+        
+        <div id="home">
+            <div class="img1">
+                <div class="text">
+                    <h1>REVIVAL</h1>
+                </div>
+            </div>
+            <div class="container">
+                <h1 style="font-family: Nasa;">What is Revival?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto tempora cupiditate id ea et facilis officia, pariatur similique unde possimus facere corrupti voluptate ratione sint enim repellat, voluptatem, animi itaque corporis autem laboriosam dolorem neque? Quae exercitationem natus tempora corporis fuga nihil dicta eos perferendis dolore atque mollitia minus tenetur nam ducimus asperiores amet ratione vel placeat assumenda maiores sunt, porro voluptatem animi? Non, excepturi? Asperiores dolores expedita doloribus autem, nobis quos eligendi labore ipsum nostrum, officia, beatae quod! Suscipit, placeat molestias! Quo quidem soluta aut saepe impedit. Nobis fuga, illum tempora minus voluptas molestias eligendi laudantium fugiat quos.</p>
+            </div>
+
+            <h1 class="a" onmouseover="changeText(this)" onmouseout="changeTextBack(this)">A Great Journey Awaits</h1>
+        </div>
+
+        <div id="about">
+            <h1>About Revival</h1>
+        </div>
+
+        <div id="games">
+            
+        </div>
+
+        <div id="tickets">
+            <img src="assets/bracelets.png" alt="bracelets" class="bracelet">
+            <div class="button" onclick="redirectOnClick()">
+                <h1>Get Your Ticket Now</h1>
+              </div>
+        </div>
+
+        <div id="footer">
+            <div id="contacts">
+              <h2>Contact Us</h2>
+              <ul>
+                <li><a href="mailto:info@example.com">info@example.com</a></li>
+                <li><a href="tel:+1234567890">+1234567890</a></li>
+                <li><a href="https://www.example.com">www.example.com</a></li>
+              </ul>
+            </div>
+            <div id="social-media">
+              <h2>Follow Us</h2>
+              <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+              </ul>
+            </div>
+            <p onclick="playMinecraft()">&copy; Achira Squad. All rights reserved.</p>
+          </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/0684572857.js" crossorigin="anonymous"></script>
+</body>
+</html>
