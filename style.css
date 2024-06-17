@@ -41,10 +41,8 @@
 }
 
 #wide-screen {
-    position: relative;
     width: 100%;
     max-height: 100vh;
-    background: url(assets/background.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -55,15 +53,11 @@
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: transparent;
+    background: #4c75db71;
     display: flex;
     justify-content: space-between;
     z-index: 10;
     transition: background-color 0.2s ease-in-out;
-}
-
-#wide-screen .header.scrolled {
-    background-color: #110996;
 }
 
 #wide-screen .logo {
@@ -104,7 +98,42 @@
     width: 100%;
 }
 
+/* dropdown */
+#wide-screen .navbar .dropdown {
+    position: relative;
+}
+
+#wide-screen .navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4c75db71;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#wide-screen .navbar .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+#wide-screen .navbar .dropdown-content a:hover {
+    background-color: #555;
+}
+
+#wide-screen .navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+/* end */
 #wide-screen #main {
+    position: relative;
+    background: url(assets/bgmain.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
     margin: 0;
     padding: 0;
     display: flex;
@@ -133,7 +162,7 @@
     display: flex;
     width: 300px;
     height: 100px;
-    background-color: rgb(29, 114, 211);
+    background-color: rgb(203, 213, 224);
     position: absolute;
     margin-top: 350px;
     text-align: center;
@@ -151,200 +180,310 @@
 }
 
 #wide-screen #home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: url(assets/bghome.jpg);
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    position: absolute;
-    height: 1000px;
-    background-color: rgb(8, 15, 39);
+    height: 100vh;
 }
 
 #wide-screen #home .img1 {
-    position: absolute;
-    margin-top: 130px;
-    margin-left: 50px;
-    width: 500px;
-    height: 300px;
-    background-color: transparent;
+    text-align: center;
 }
 
-#wide-screen #home .img1 .text {
-    font-family: Zing;
-    display: flex;
-    justify-content: center;
-    margin-top: 120px;
+#wide-screen #home .text {
+    margin-top: 6%;
+    position: relative;
+    text-align: center;
 }
 
-#wide-screen #home .img1 .text h1 {
-    font-family: Zing;
-    font-size: 110px;
+#wide-screen #home .text h1{
+    font-family: ZingBG;
+    font-size: 50px;
 }
 
 #wide-screen #home .container {
-    position: absolute;
-    width: 900px;
-    height: 400px;
-    background-color: white;
-    right: 0;
-    margin-right: 50px;
-    margin-top: 150px;
-    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#wide-screen #home .box1, #wide-screen #home .box2 {
+    margin-top: 50px;
+    align-items: center;
     text-align: center;
+    width: 400px;
+    height: 500px;
+    background-image: url(assets/profile\ bg.jpg);
+    border-radius: 40px;
+    z-index: 1;
 }
 
-#wide-screen #home .container h1 {
-    margin-top: 60px;
-}
-
-#wide-screen #home .container p {
-    margin: 30px;
-}
-
-#wide-screen #home .a {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 150px;
-    font-family: Neon;
-    font-size: 40px;
-    color: white;
-    margin-left: 150px;
-    transition: all 1s ease-in-out;
+#wide-screen #home .profile {
+    width: 240px;
+    margin-top: 50px;
+    border-radius: 50%;
 }
 
 #wide-screen #about {
-    position: absolute;
+    position: relative;
+    height: 100vh;
     width: 100%;
-    height: 378px;
-    background-color: #fff;
-    top: 1680px;
+    background-color: #F5E5D5;
+}
+
+#wide-screen #about #container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wide-screen #about .container {
+    position: absolute;
+    border-radius: 10px;
+    right: 0;
+    margin-right: 10%;
+    bottom: 0;
+    margin-bottom: 6%;
+    width: 900px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.616);
+    box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+    -webkit-box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+    -moz-box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
 }
 
 #wide-screen #games {
+    position: relative;
+    display: flex;
+    background-image: url(assets/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 1920px;
-    background-color: red;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
 }
 
-#wide-screen #tickets {
-    width: 100%;
-    height: 378px;
-    background-color: rgb(8, 15, 39);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-}
-
-#wide-screen #tickets .button {
-    display: flex;
-    margin-left: 500px;
-    width: 300px;
-    height: 80px;
-    background-color: rgb(105, 219, 30);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    box-shadow: 24px 10px 30px 5px rgba(91,221,24,0.75);
-    -webkit-box-shadow: 24px 10px 30px 5px rgba(91,221,24,0.75);
-    -moz-box-shadow: 24px 10px 30px 5px rgba(91,221,24,0.75);
+#wide-screen #games .game-container {
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px;
+    width: 400px;
+    height: 450px;
+    background-color: rgba(86, 71, 71, 0.756);
 }
 
-#wide-screen #tickets .button h1 {
-    font-family: Nasa;
-    font-size: 25px;
+#wide-screen #games .game-container h1 {
+    font-family: neon;
+    text-align: center;
+    padding: 10px;
 }
 
-#wide-screen #tickets .bracelet {
+#wide-screen #games .game-container img {
+    width: 240px;
+    padding-top: 10px;
+}
+
+/* Make #info appear on top of everything else */
+#info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.599);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.window {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 800px;
+    height: 600px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#one {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#two {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#three {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#four {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+
+/* shop */
+
+#shop {
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+    position: relative;
+    background-color: #030715;
+}
+
+#shop .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#shop .container img {
     width: 300px;
-    height: auto;
+}
+
+/* footer */
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+#footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#footer-about,
+#footer-links,
+#footer-follow,
+#footer-contact {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+#footer-about h2,
+#footer-links h2,
+#footer-follow h2,
+#footer-contact h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+#footer-about p,
+#footer-links ul,
+#footer-links a,
+#footer-contact p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+#footer-links ul li {
+    margin-bottom: 10px;
+}
+
+#footer-links ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+#footer-links ul li a:hover {
+    color: #fff;
+}
+
+#footer-social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ccc;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+#footer-social-links a:hover {
+    color: #ffcc00;
+}
+
+#footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    margin-top: 40px;
+}
+
+#footer-bottom p {
+    margin: 0;
+    color: #ccc;
+}
+
+#minecraft {
+    width: 20px;
 }
 
 html {
     scroll-behavior: smooth;
 }
-
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#wide-screen {
-    flex: 1;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-#footer {
-    top: 370px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 150px;
-    background-color: rgb(16, 15, 75);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-#contacts {
-    float: left;
-    width: 30%;
-    padding: 10px;
-}
-
-#social-media {
-    float: right;
-    width: 30%;
-    padding: 10px;
-}
-
-#footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#footer li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-#footer a {
-    color: white;
-    text-decoration: none;
-}
-
-#footer a:hover {
-    color: #ccc;
-}
-
-#footer p {
-    clear: both;
-    margin-top: 20px;
-}
-
-.audio-controls {
-    display: flex;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .slider-container {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-  }
-  
-  #time-slider {
-    width: 100px; /* adjust the width to your liking */
-  }
-  
-  #current-time {
-    margin-left: 14px;
-  }

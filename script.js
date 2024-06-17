@@ -1,136 +1,78 @@
 const h1Element = document.querySelector('#wide-screen #home .img1 .text h1');
+const h1About = document.querySelector('#wide-screen #about h1');
+const h1Shop = document.querySelector('#wide-screen #shop .h1');
 
 let colors = [
-    '#FF69B4', // Hot Pink
-    '#FFC107', // Amber
-    '#FFD700', // Gold
-    '#FFFF00', // Yellow
-    '#33CC33', // Lime
-    '#00FFFF', // Cyan
-    '#66CCCC', // Bright Teal
-    '#FF99CC', // Pastel Pink
-    '#FFA07A', // Light Coral
-    '#FFC0CB', // Pastel Pink
-    '#ADD8E6', // Light Blue
-    '#7FFD00', // Chartreuse
-    '#FF69B4', // Hot Pink
-    '#FFA500', // Coral
-    '#FFFF99', // Yellow Green
-    '#CCFF00', // Bright Yellow
-    '#33FF00', // Lime Green
-    '#00FF00', // Green
-    '#66FF00', // Bright Chartreuse
-    '#CCFFFF', // Pale Turquoise
-    '#99FF99', // Mint Green
-    '#66CCCC', // Bright Teal
-    '#33CCCC', // Teal
-    '#0099FF', // Sky Blue
-    '#0066FF', // Royal Blue
-    '#0033FF', // Navy Blue
-  ];
-let colorIndex = 0;
+    '#FF69B4', '#FFC107', '#FFD700', '#FFFF00', '#33CC33',
+    '#00FFFF', '#66CCCC', '#FF99CC', '#FFA07A', '#FFC0CB',
+    '#ADD8E6', '#7FFD00', '#FF69B4', '#FFA500', '#FFFF99',
+    '#CCFF00', '#33FF00', '#00FF00', '#66FF00', '#CCFFFF',
+    '#99FF99', '#66CCCC', '#33CCCC', '#0099FF', '#0066FF',
+    '#0033FF'
+];
+
+function getRandomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+}
 
 setInterval(() => {
-  h1Element.style.color = colors[colorIndex];
-  colorIndex = (colorIndex + 1) % colors.length; // loop through the colors array
+    let randomColor = getRandomColor();
+    h1Element.style.color = randomColor;
+    h1About.style.color = randomColor;
+    h1Shop.style.color = randomColor;
 }, 2000); // change color every 2 seconds
 
-document.addEventListener('scroll', () => {
-  const nav = document.querySelector('#wide-screen .header');
-  const screenHeight = screen.height;
-  let scrollThreshold = 0;
 
-  if (screenHeight === 1080) {
-    scrollThreshold = 866;
-  } else {
-    scrollThreshold = 599;
-  }
-  console.log(screenHeight);
-  console.log(window.scrollY);
-  if (window.scrollY > scrollThreshold) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
-});
+function ticketWeb() {
+  window.location.href = "https://recisrevival.my.id/";
+}
 
-function redirectOnClick() {
-  window.location.href = "buy-ticket.html";
+function signUp() {
+  window.location.href = "extra/registration.html";
+}
+
+function webTeam() {
+  window.location.href = "extra/unavailable.html";
 }
 
 function playMinecraft() {
   window.location.href = "assets/minecraft/EaglercraftX_1.8_u31_Offline_Signed.html";
 }
 
-const buttons = document.querySelectorAll('.button');
+const info = document.querySelector('#info');
+const window1 = document.querySelector('#one');
+const window2 = document.querySelector('#two');
+const window3 = document.querySelector('#three');
+const window4 = document.querySelector('#four');
 
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    window.location.href = "buy-ticket.html";
-  });
-});
-
-function changeText(element) {
-  element.innerText = "The Adventure Begins";
+function hideInfo() {
+  info.style.display = 'none';
+  window1.style.display = 'none';
+  window2.style.display = 'none';
+  window3.style.display = 'none';
+  window4.style.display = 'none';
 }
 
-function changeTextBack(element) {
-  element.innerText = "A Great Journey Awaits"
+function showWindow1() {
+  hideInfo();
+  info.style.display = 'flex';
+  window1.style.display = 'flex';
 }
 
-// Get the audio element
-const audio = new Audio('assets/song-bg.mp3');
+function showWindow2() {
+  hideInfo();
+  info.style.display = 'flex';
+  window2.style.display = 'flex';
+}
 
-// Get the play and pause buttons
-const playButton = document.getElementById('play-button');
-const pauseButton = document.getElementById('pause-button');
+function showWindow3() {
+  hideInfo();
+  info.style.display = 'flex';
+  window3.style.display = 'flex';
+}
 
-// Get the time slider
-const timeSlider = document.getElementById('time-slider');
-
-// Get the current time span
-const currentTimeSpan = document.getElementById('current-time');
-
-// Set the audio controls to be hidden initially
-const audioControls = document.querySelector('.audio-controls');
-audioControls.style.display = 'none';
-
-// Show the audio controls after 10 seconds
-setTimeout(() => {
-  audioControls.style.display = 'block';
-}, 10000);
-
-// Play the audio 9 seconds after the page is loaded
-setTimeout(() => {
-  audio.play();
-}, 9000);
-
-// Add event listeners to the play and pause buttons
-playButton.addEventListener('click', () => {
-  audio.play();
-  playButton.style.display = 'none';
-  pauseButton.style.display = 'block';
-});
-
-pauseButton.addEventListener('click', () => {
-  audio.pause();
-  playButton.style.display = 'block';
-  pauseButton.style.display = 'none';
-});
-
-// Update the time slider and current time span
-audio.addEventListener('timeupdate', () => {
-  const currentTime = audio.currentTime;
-  const minutes = Math.floor(currentTime / 60);
-  const seconds = Math.floor(currentTime % 60);
-  currentTimeSpan.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-  timeSlider.value = currentTime;
-});
-
-// Update the audio time when the time slider is changed
-timeSlider.addEventListener('input', () => {
-  audio.currentTime = timeSlider.value;
-});
-
-// Set the time slider max value to 11 minutes 33 seconds
-timeSlider.max = 693;
+function showWindow4() {
+  hideInfo();
+  info.style.display = 'flex';
+  window4.style.display = 'flex';
+}

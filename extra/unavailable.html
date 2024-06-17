@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(135deg, #4c74db, #6fa3ef);
+    color: #fff;
+    text-align: center;
+}
+
+#error-content {
+    max-width: 600px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#error-content h1 {
+    font-size: 96px;
+    margin-bottom: 20px;
+}
+
+#error-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#error-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#error-content a {
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#error-content a:hover {
+    background: #fff;
+    color: #4c74db;
+}
+
+#error-content a i {
+    margin-right: 10px;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="error-page">
+        <div id="error-content">
+            <h1>404</h1>
+            <h2>Page Not Found</h2>
+            <p>Sorry, but the page you were looking for could not be found.</p>
+            <a href="#" onclick="goBack()" id="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
+            <a href="../index.html#main" id="home-button"><i class="fas fa-home"></i> Home Page</a>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

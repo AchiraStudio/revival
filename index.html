@@ -3,150 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opening</title>
-    <style>
-        @font-face {
-            font-family: Breety;
-            src: url(fonts/Breetty\ Regular.otf);
-        }
+    <title>Revival (Demo)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-        @font-face {
-            font-family: Nasa;
-            src: url(fonts/nasalization-rg.otf);
-        }
-
-        @font-face {
-            font-family: Neon;
-            src: url(fonts/NEON\ CLUB\ MUSIC.otf);
-        }
-
-        @font-face {
-            font-family: Spring;
-            src: url(fonts/Spring.ttf);
-        }
-
-        @font-face {
-            font-family: Poppins;
-            src: url(fonts/Poppins-Regular.ttf);
-        }
-
-        @font-face {
-            font-family: Zing;
-            src: url(fonts/Zing.otf);
-        }
-
-        @font-face {
-            font-family: ZingBG;
-            src: url(fonts/ZingBG.otf);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: rgb(65, 8, 65);
-        }
-
-        #text {
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
-            font-size: 70px;
-            font-family: Poppins;
-        }
-
-        #one {
-            transition: opacity 0.5s;
-        }
-
-        #two {
-            display: none;
-            transition: opacity 0.5s;
-        }
-
-        #three {
-            display: none;
-            transition: opacity 0.5s;
-            font-size: 45px;
-        }
-
-        #four {
-            display: none;
-            transition: opacity 0.5s;
-        }
-    </style>
 </head>
 <body>
-    <div id="text">
-        <div id="one">
-            <h1>Hi</h1>
+    <div id="wide-screen">
+        <div id="info">
+            <div id="one" class="window" >
+                <h1>Revival (Demo)</h1>
+                <h1>Sports</h1>
+                <h2 onclick="signUp()" style="cursor: pointer;">Tertarik? Jadilah Bintang Kita!</h2>
+                <h3 onclick="hideInfo()"style="cursor: pointer;">Close</h3>
+            </div>
+            <div id="two" class="window">
+                <h1>Revival (Demo)</h1>
+                <h1>E-Sports</h1>
+                <h2 onclick="signUp()" style="cursor: pointer;">Tertarik? Jadilah Bintang Kita!</h2>
+                <h3 onclick="hideInfo()" style="cursor: pointer;">Close</h3>
+            </div>
+            <div id="three" class="window">
+                <h1>Revival (Demo)</h1>
+                <h1>Music</h1>
+                <h2 onclick="signUp()" style="cursor: pointer;">Tertarik? Jadilah Bintang Kita!</h2>
+                <h3 onclick="hideInfo()" style="cursor: pointer;">Close</h3>
+            </div>
+            <div id="four" class="window">
+                <h1>Revival (Demo)</h1>
+                <h1>Other</h1>
+                <h2 onclick="signUp()" style="cursor: pointer;">Tertarik? Jadilah Bintang Kita!</h2>
+                <h3 onclick="hideInfo()" style="cursor: pointer;">Close</h3>
+            </div>
+        </div>
+        <header class="header">
+            <a href="#main" class="logo">REVIVAL</a>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <div class="dropdown">
+                    <a href="#games" style="z-index: 110;">Competitions</a>
+                    <div class="dropdown-content">
+                        <a href="#schedule">Schedule</a>
+                        <a href="results">Results</a>
+                    </div>
+                </div>
+                <a href="#shop">Shop</a>
+                <a href="#footer">Contacts</a>
+            </nav>
+        </header>
+        <div id="main">
+            <h1 style="text-align: center; position: absolute; margin-bottom: 600px;">*Tes background*Nah ini main background kita, taruh disini</h1>
+
+            <h1 id="front">Revival</h1>
+            <h1 id="bg">Revival</h1>
+
+            <div class="button" onclick="signUp()">
+                <h1>Join The Show</h1>
+              </div>
+        </div>
+        
+        <div id="home">
+
+            <h1 style="text-align: center;">*Tes background* kayaknya kasih bg yg colorful deh tp nyambung ama warna diatas(bukan nyambung beneran)</h1>
+            <div id="container">
+                <div class="img1">
+                    <div class="text">
+                        <h1 onclick="webTeam()">Meet Our Leader</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="container1">
+                        <div class="box1">
+                            <h2 style="margin-top: 30px; font-size: 35px; color: white;">"Ketua Kita"</h2>
+                            <img src="assets/profile.png" alt="Vella" class="profile">
+                        </div>
+                    </div>
+                    <div class="container2">
+                        <div class="box2">
+                            <h2 style="margin-top: 30px; font-size: 35px; color: white;">"Waket Kita"</h2>
+                            <img src="assets/profile.png" alt="Vella" class="profile">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="two">
-            <h1>Wait a second</h1>
+        <hr>
+
+        <div id="about">
+            <h1 style="margin-left: 10%; margin-top: 5%; position: absolute; font-family: ZingBG; font-size: 80px;">What is Revival?</h1>
+            <div id="container">
+                <div class="container" style="text-align: center;">
+                    <h1 style="padding: 10px;">Ya Penjelasan lah</h1>
+                    <p style="padding: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem fuga perferendis praesentium, laborum ex voluptates quaerat minima vero. Impedit reiciendis eveniet, et nobis tempore beatae at ullam nihil labore possimus hic unde reprehenderit minima quidem. Quae vitae ad nesciunt quo quibusdam mollitia placeat odit corporis ipsum, alias exercitationem officia doloremque optio tempore quas aut hic possimus repudiandae tenetur et nemo sunt ullam, perferendis dolorum. Nisi quibusdam natus aliquid tempore harum veniam. Incidunt ducimus at harum neque corrupti, possimus cupiditate debitis voluptates voluptate nobis officiis inventore labore ea officia quisquam quaerat veritatis, quibusdam magni autem corporis error sit pariatur. Ea est ab ipsam aperiam nemo nisi suscipit illo! Asperiores exercitationem provident laboriosam repellat totam voluptatum, aut nobis error voluptas mollitia molestias, esse necessitatibus quod consequuntur ipsum! Sapiente doloribus esse, voluptate quam hic eos sit illum, saepe facilis iure maxime pariatur blanditiis soluta minus amet molestiae architecto magni in possimus ex distinctio tenetur. Quasi, corrupti eaque facilis veniam itaque blanditiis magni ex eligendi odit doloribus tempore magnam sequi similique impedit quaerat eos quisquam maxime. Cumque quos vero beatae obcaecati consequuntur repudiandae possimus, magnam aliquam corporis voluptate ab quo! Corrupti molestias quidem maxime doloremque excepturi illum nostrum, voluptatum architecto, tempore libero ab.</p>
+                </div>
+                <h1>kasih background disini</h1>
+            </div>
         </div>
 
-        <div id="three">
-            <h1>Please turn up your volume</h1>
-            <h1>For the best</h1>
-            <h1>Experience</h1>
+        <div id="games">
+            <div class="game-container" onclick="showWindow1()">
+                <h1>Sports</h1>
+                <img src="assets/profile.png" alt="sports">
+                <h3 style="margin-top: 20px;">Basket, Bola, dll</h3>
+            </div>
+            <div class="game-container" onclick="showWindow2()">
+                <h1>E-Sports</h1>
+                <img src="assets/profile.png" alt="sports">
+                <h3 style="margin-top: 20px;">Game mobile</h3>
+            </div>
+            <div class="game-container" onclick="showWindow3()">
+                <h1>Music</h1>
+                <img src="assets/profile.png" alt="sports">
+                <h3 style="margin-top: 20px;">Band, nyanyi, dll</h3>
+            </div>
+            <div class="game-container" onclick="showWindow4()">
+                <h1>(gatau)</h1>
+                <img src="assets/profile.png" alt="sports">
+                <h3 style="margin-top: 20px;">Apa gitu</h3>
+            </div>
         </div>
 
-        <div id="four">
-            <h1>Here we go</h1>
+        <div id="shop">
+            <h1 style="padding-top: 10px; font-family: Zing; font-size: 45px; color:  white;">Buy Our Merch!</h1>
+            <div class="container">
+                <img src="assets/bracelet red.png" alt="1">
+                <img src="assets/bracelet blue.png" alt="2">
+                <img src="assets/bracelet green.png" alt="3" style="margin-right: 10%;">
+                <h1 onclick="ticketWeb()" style="font-family: ZingBG; font-size: 50px; cursor: pointer;" class="h1">Get Yours Now!!!</h1>
+            </div>
         </div>
+
+        <footer id="footer">
+            <div id="footer-container">
+                <div id="footer-about">
+                    <h2>About Us</h2>
+                    <p>Revival is dedicated to bringing you the best in sports, e-sports, and music competitions. Join us for an unforgettable experience.</p>
+                </div>
+                <div id="footer-links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#main">Main Screen</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#games">Competitions</a></li>
+                        <li><a href="#tickets">Shop</a></li>
+                        <li><a href="#footer">Contacts</a></li>
+                        <li><a href="https://recisrevival.my.id/">Shop</a></li>
+                    </ul>
+                </div>
+                <div id="footer-follow">
+                    <h2>Follow Us</h2>
+                    <div id="footer-social-links">
+                        <a href="https://www.instagram.com/recisshs"><i class="fab fa-instagram"></i></a>
+                        <img src="assets/mc.png" alt="minecraft" id="minecraft" onclick="playMinecraft()" style="cursor: pointer;">
+                    </div>
+                </div>
+                <div id="footer-contact">
+                    <h2>Contact Us</h2>
+                    <p>Email: nathanplayz806@gmail.com</p>
+                    <p>Phone: +62-878-9702-5720</p>
+                    <p>Address: SMA Regina Pacis Bogor</p>
+                </div>
+            </div>
+            <div id="footer-bottom">
+                <p>&copy; 2024 Revival. All rights reserved.</p>
+            </div>
+        </footer>         
     </div>
 
-    <script>
-        let currentIndex = 0;
-        const elements = [
-            { id: 'one', displayTime: 2300 },
-            { id: 'two', displayTime: 2300 },
-            { id: 'three', displayTime: 2300 },
-            { id: 'four', displayTime: 2300 }
-        ];
-
-        function showNextElement() {
-            if (currentIndex > 0) {
-                const prevElement = document.getElementById(elements[currentIndex - 1].id);
-                prevElement.style.opacity = 0;
-                prevElement.addEventListener('transitionend', () => {
-                    prevElement.style.display = 'none';
-                    if (currentIndex < elements.length) {
-                        showElement();
-                    } else {
-                        redirectToMain();
-                    }
-                }, { once: true });
-            } else {
-                showElement();
-            }
-        }
-
-        function showElement() {
-            const currentElement = document.getElementById(elements[currentIndex].id);
-            currentElement.style.display = 'block';
-            setTimeout(() => {
-                currentElement.style.opacity = 1;
-            }, 100);
-
-            setTimeout(() => {
-                currentIndex++;
-                showNextElement();
-            }, elements[currentIndex].displayTime);
-        }
-
-        function redirectToMain() {
-            window.location.href = 'main.html';
-        }
-
-        document.addEventListener('DOMContentLoaded', showNextElement);
-    </script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/0684572857.js" crossorigin="anonymous"></script>
 </body>
 </html>
