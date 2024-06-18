@@ -906,11 +906,12 @@ html {
     #wide-screen #home {
         position: relative;
         display: flex;
+        flex-direction: column;
         background: url(assets/bghome.jpg);
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 130vh;
+        height: 170vh;
     }
     
     #wide-screen #home .img1 {
@@ -1028,6 +1029,10 @@ html {
     }
 
     /* about */
+    #wide-screen #about {
+        height: 150vh;
+    }
+
     #wide-screen #about .container .h1 {
         padding: 10px;
     }
@@ -1067,6 +1072,14 @@ html {
         text-align: center;
         margin-left: 4px;
         width: 36px;
+    }
+
+    #shop {
+        width: 100%;
+        height: 210vh;
+        text-align: center;
+        position: relative;
+        background-color: #030715;
     }
 
     .head {
@@ -1118,18 +1131,14 @@ html {
 }
 
 @media screen and (max-width: 375px) {
-    #shop {
-        width: 100%;
-        height: 200vh;
-        text-align: center;
-        position: relative;
-        background-color: #030715;
+    #wide-screen #about {
+        height: 155vh;
     }
 
     #wide-screen #main #front {
         font-family: Zing;
         color: #fff;
-        font-size: 110px;
+        font-size: 95px;
         z-index: 2;
     }
     
@@ -1137,7 +1146,7 @@ html {
     #wide-screen #main #bg {
         position: absolute;
         font-family: ZingBG;
-        font-size: 105px;
+        font-size: 90px;
         margin-left: 50px;
         margin-top: 20px;
         color: #ffffff41;
@@ -1168,7 +1177,7 @@ html {
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 130vh;
+        height: 140vh;
     }
     
     #wide-screen #home .img1 {
@@ -1307,6 +1316,14 @@ html {
         font-size: 17px;
     }
 
+    #shop {
+        width: 100%;
+        height: 208vh;
+        text-align: center;
+        position: relative;
+        background-color: #030715;
+    }
+
 }
 
 @media screen and (max-width: 320px) {
@@ -1317,7 +1334,10 @@ html {
         z-index: 2;
         margin-top: 70px;
     }
-    
+
+    #wide-screen #about {
+        height: 160vh;
+    }
     
     #wide-screen #main #bg {
         position: absolute;
@@ -1353,7 +1373,7 @@ html {
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 130vh;
+        height: 145vh;
     }
     
     #wide-screen #home .img1 {
@@ -1454,7 +1474,7 @@ html {
 
     #shop {
         width: 100%;
-        height: 205vh;
+        height: 210vh;
         text-align: center;
         position: relative;
         background-color: #030715;
