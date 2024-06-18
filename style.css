@@ -40,6 +40,10 @@
     font-family: Poppins;
 }
 
+#dropdown {
+    display: none;
+}
+
 #wide-screen {
     width: 100%;
     max-height: 100vh;
@@ -103,6 +107,25 @@
     position: relative;
 }
 
+#dropdown a {
+    font-size: 37px;
+    text-decoration: none;
+    color: white;
+    font-family: Breety;
+    margin-right: 23%;
+}
+
+.burger {
+    display: none;
+    margin-left: 39%;
+    height: 37px;
+    width: 37px;
+}
+
+#wide-screen .menu {
+    display: none;
+}
+
 #wide-screen .navbar .dropdown-content {
     display: none;
     position: absolute;
@@ -148,6 +171,7 @@
     font-size: 150px;
     z-index: 2;
 }
+
 
 #wide-screen #main #bg {
     position: absolute;
@@ -205,6 +229,14 @@
     font-size: 50px;
 }
 
+#wide-screen #home .h2 {
+    margin-top: 5%; 
+    font-size: 35px;
+    font-family: Poppins;
+    font-weight: bolder;
+    color: white;
+}
+
 #wide-screen #home .container {
     display: flex;
     justify-content: space-evenly;
@@ -222,7 +254,7 @@
 }
 
 #wide-screen #home .profile {
-    width: 240px;
+    width: 290px;
     margin-top: 50px;
     border-radius: 50%;
 }
@@ -231,7 +263,10 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: #F5E5D5;
+    background-image: url(assets/revival\(keisya\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #wide-screen #about #container {
@@ -240,6 +275,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#wide-screen #about .container .h1 {
+    padding: 10px;
+}
+
+#wide-screen #about .container .h2 {
+    padding: 20px;
 }
 
 #wide-screen #about .container {
@@ -260,15 +303,17 @@
 #wide-screen #games {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     background-image: url(assets/background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 60vh;
+    height: 140vh;
     align-items: center;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    overflow-y: scroll;
 }
 
 #wide-screen #games .game-container {
@@ -283,9 +328,9 @@
 }
 
 #wide-screen #games .game-container h1 {
-    font-family: neon;
     text-align: center;
-    padding: 10px;
+    padding: 5%;
+    font-family: Zing; font-size: 35px; color:  rgb(0, 0, 0);
 }
 
 #wide-screen #games .game-container img {
@@ -379,7 +424,6 @@
 
 #shop {
     width: 100%;
-    height: 60vh;
     text-align: center;
     position: relative;
     background-color: #030715;
@@ -487,3 +531,917 @@
 html {
     scroll-behavior: smooth;
 }
+
+@media screen and (max-width: 1440px) {
+    /* home */
+    #wide-screen #home {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: url(assets/bghome.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    #wide-screen #home .img1 {
+        text-align: center;
+    }
+    
+    #wide-screen #home .text {
+        margin-top: 3%;
+        position: relative;
+        text-align: center;
+    }
+    
+    #wide-screen #home .text h1{
+        font-family: ZingBG;
+        font-size: 40px;
+    }
+    
+    #wide-screen #home .h2 {
+        margin-top: 5%; 
+        font-size: 30px;
+        font-family: Poppins;
+        font-weight: bolder;
+        color: white;
+    }
+    
+    #wide-screen #home .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #wide-screen #home .box1, #wide-screen #home .box2 {
+        margin-top: 50px;
+        align-items: center;
+        text-align: center;
+        width: 310px;
+        height: 410px;
+        background-image: url(assets/profile\ bg.jpg);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    
+    #wide-screen #home .profile {
+        width: 210px;
+        margin-top: 50px;
+        border-radius: 50%;
+    }
+
+    /* about */
+    #wide-screen #about .container .h1 {
+        padding: 10px;
+    }
+    
+    #wide-screen #about .container .h2 {
+        padding: 20px;
+    }
+    
+    #wide-screen #about .container {
+        position: absolute;
+        border-radius: 10px;
+        right: 0;
+        margin-right: 10%;
+        bottom: 0;
+        margin-bottom: 6%;
+        width: 800px;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.616);
+        box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        -webkit-box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        -moz-box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        overflow-y: scroll;
+    }
+    
+
+        /* shop */
+
+    #shop {
+        width: 100%;
+        height: 60vh;
+        text-align: center;
+        position: relative;
+        background-color: #030715;
+    }
+
+    #shop .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #shop .container img {
+        width: 300px;
+    }
+
+    /* games */
+
+    #wide-screen #games{
+        overflow-y: hidden;
+    }
+
+    #wide-screen #games .game-container {
+        overflow-y: hidden;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin: 80px;
+        width: 400px;
+        height: 400px;
+        background-color: rgba(86, 71, 71, 0.756);
+    }
+    
+    #wide-screen #games .game-container h1 {
+        text-align: center;
+        padding: 5%;
+        font-family: Zing; font-size: 35px; color:  rgb(0, 0, 0);
+    }
+    
+    #wide-screen #games .game-container img {
+        width: 220px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* shop */
+
+    #shop {
+        width: 100%;
+        height: 79vh;
+        text-align: center;
+        position: relative;
+        background-color: #030715;
+    }
+
+    #shop .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap ;
+    }
+
+    #shop .container img {
+        width: 300px;
+    }
+
+    #minecraft {
+        display: none;
+    }
+
+    #wide-screen #games {
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* home */
+    #wide-screen #home {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: url(assets/bghome.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    #wide-screen #home .img1 {
+        text-align: center;
+    }
+    
+    #wide-screen #home .text {
+        margin-top: 3%;
+        position: relative;
+        text-align: center;
+    }
+    
+    #wide-screen #home .text h1{
+        font-family: ZingBG;
+        font-size: 40px;
+    }
+    
+    #wide-screen #home .h2 {
+        margin-top: 5%; 
+        font-size: 30px;
+        font-family: Poppins;
+        font-weight: bolder;
+        color: white;
+    }
+    
+    #wide-screen #home .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #wide-screen #home .box1, #wide-screen #home .box2 {
+        margin-top: 50px;
+        align-items: center;
+        text-align: center;
+        width: 310px;
+        height: 410px;
+        background-image: url(assets/profile\ bg.jpg);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    
+    #wide-screen #home .profile {
+        width: 210px;
+        margin-top: 50px;
+        border-radius: 50%;
+    }
+
+    /* about */
+    #wide-screen #about .container .h1 {
+        padding: 10px;
+    }
+    
+    #wide-screen #about .container .h2 {
+        padding: 20px;
+    }
+    
+    #wide-screen #about .container {
+        position: absolute;
+        border-radius: 10px;
+        right: 0;
+        margin-right: 10%;
+        bottom: 0;
+        margin-bottom: 6%;
+        width: 400px;
+        height: 500px;
+        background-color: rgba(255, 255, 255, 0.616);
+        box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        -webkit-box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        -moz-box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        overflow-y: scroll;
+    }
+
+    /* games */
+
+    #wide-screen #games {
+        overflow-y: scroll;
+    }
+    #wide-screen #games .game-container {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 80px;
+        width: 360px;
+        height: 370px;
+        background-color: rgba(86, 71, 71, 0.756);
+    }
+    
+    #wide-screen #games .game-container h1 {
+        text-align: center;
+        padding: 3%;
+        font-family: Zing; font-size: 35px; color:  rgb(0, 0, 0);
+    }
+    
+    #wide-screen #games .game-container img {
+        width: 210px;
+        padding-top: 10px;
+    }
+
+        /* shop */
+
+        #shop {
+            width: 100%;
+            height: 110vh;
+            text-align: center;
+            position: relative;
+            background-color: #030715;
+        }
+    
+        #shop .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap ;
+        }
+    
+        #shop .container img {
+            width: 300px;
+        }
+
+        #minecraft {
+            display: none;
+        }
+
+        /* new nav */
+
+        #wide-screen .navbar a {
+            display: none;
+        }
+
+        #dropdown a {
+            display: none;
+        }
+
+        .burger {
+            text-align: center;
+            display: block;
+            visibility: visible;
+            width: 40px;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .close {
+            width: 30px;
+            height: 30px;
+            margin-top: 23px;
+            margin-right: 10%;
+        }
+
+        #wide-screen .menu {
+            position: fixed;
+            width: 40%;
+            height: 100vh;
+            background-color: #4c75db;
+            z-index: 199;
+            display: block;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            display: none;
+        }
+
+        #wide-screen .menu h1 {
+            font-family: ZingBG;
+            color: white;
+            font-size: 60px;
+            margin-left: 10%;
+        }
+
+        #wide-screen .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+        }
+
+        .window {
+            width: 400px;
+            height: 800px;
+        }
+}
+
+
+@media screen and (max-width:425px) {
+    #wide-screen .logo {
+        display: none;
+    }
+
+    #wide-screen #dropdown {
+        display: flex;
+    }
+    /* home */
+    #wide-screen #home {
+        position: relative;
+        display: flex;
+        background: url(assets/bghome.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 130vh;
+    }
+    
+    #wide-screen #home .img1 {
+        text-align: center;
+    }
+    
+    #wide-screen #home .text {
+        margin-top: 3%;
+        position: relative;
+        text-align: center;
+    }
+    
+    #wide-screen #home .text h1{
+        font-family: ZingBG;
+        font-size: 40px;
+    }
+    
+    #wide-screen #home .h2 {
+        margin-top: 5%; 
+        font-size: 30px;
+        font-family: Poppins;
+        font-weight: bolder;
+        color: white;
+    }
+    
+    #wide-screen #home .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #wide-screen #home .box1, #wide-screen #home .box2 {
+        margin-top: 50px;
+        align-items: center;
+        text-align: center;
+        width: 310px;
+        height: 410px;
+        background-image: url(assets/profile\ bg.jpg);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    
+    #wide-screen #home .profile {
+        width: 210px;
+        margin-top: 50px;
+        border-radius: 50%;
+    }
+
+    #wide-screen #main {
+        position: relative;
+        background: url(assets/bgmain.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    #wide-screen #main #front {
+        font-family: Zing;
+        color: #fff;
+        font-size: 120px;
+        z-index: 2;
+    }
+    
+    
+    #wide-screen #main #bg {
+        position: absolute;
+        font-family: ZingBG;
+        font-size: 118px;
+        margin-left: 50px;
+        margin-top: 20px;
+        color: #ffffff41;
+    }
+    
+    #wide-screen #main .button {
+        display: flex;
+        width: 300px;
+        height: 100px;
+        background-color: rgb(203, 213, 224);
+        position: absolute;
+        margin-top: 350px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        -webkit-box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        -moz-box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        cursor: pointer;
+    }
+    
+    #wide-screen #main .button h1 {
+        font-family: Nasa;
+    }
+
+    #wide-screen #main {
+        position: relative;
+        background: url(assets/concept.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    /* about */
+    #wide-screen #about .container .h1 {
+        padding: 10px;
+    }
+    
+    #wide-screen #about .container .h2 {
+        padding: 20px;
+    }
+    
+    #wide-screen #about .container {
+        position: absolute;
+        border-radius: 10px;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 6%;
+        width: 300px;
+        height: 500px;
+        background-color: rgba(255, 255, 255, 0.616);
+        box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        -webkit-box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        -moz-box-shadow: 28px 22px 24px 1px rgba(212,147,147,0.75);
+        overflow-y: scroll;
+    }
+
+    #shop {
+        width: 100%;
+        height: 170vh;
+        text-align: center;
+        position: relative;
+        background-color: #030715;
+    }
+
+    #dropdown a {
+        display: block;
+    }
+
+    .burger {
+        text-align: center;
+        margin-left: 4px;
+        width: 36px;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .close {
+        width: 20px;
+        height: 20px;
+        margin-top: 10px;
+        margin-right: 10%;
+    }
+
+    #wide-screen .menu {
+        position: fixed;
+        width: 55%;
+        height: 100vh;
+        background-color: #4c75db;
+        z-index: 199;
+        display: block;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s linear;
+    }
+
+    #wide-screen .menu.visible {
+        visibility: visible;
+        opacity: 1;
+    }
+        
+
+    #wide-screen .menu h1 {
+        font-family: ZingBG;
+        color: white;
+        font-size: 30px;
+        margin-left: 10%;
+    }
+
+    #wide-screen .menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #wide-screen #main #front {
+        font-family: Zing;
+        color: #fff;
+        font-size: 110px;
+        z-index: 2;
+    }
+    
+    
+    #wide-screen #main #bg {
+        position: absolute;
+        font-family: ZingBG;
+        font-size: 105px;
+        margin-left: 50px;
+        margin-top: 20px;
+        color: #ffffff41;
+    }
+    
+    #wide-screen #main .button {
+        display: flex;
+        width: 300px;
+        height: 100px;
+        background-color: rgb(203, 213, 224);
+        position: absolute;
+        margin-top: 350px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        -webkit-box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        -moz-box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        cursor: pointer;
+    }
+
+    /* home */
+    #wide-screen #home {
+        position: relative;
+        display: flex;
+        background: url(assets/bghome.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 130vh;
+    }
+    
+    #wide-screen #home .img1 {
+        text-align: center;
+    }
+    
+    #wide-screen #home .text {
+        margin-top: 3%;
+        position: relative;
+        text-align: center;
+    }
+    
+    #wide-screen #home .text h1{
+        font-family: ZingBG;
+        font-size: 40px;
+    }
+    
+    #wide-screen #home .h2 {
+        margin-top: 5%; 
+        font-size: 30px;
+        font-family: Poppins;
+        font-weight: bolder;
+        color: white;
+    }
+    
+    #wide-screen #home .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #wide-screen #home .box1, #wide-screen #home .box2 {
+        margin-top: 50px;
+        align-items: center;
+        text-align: center;
+        width: 310px;
+        height: 410px;
+        background-image: url(assets/profile\ bg.jpg);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    
+    #wide-screen #home .profile {
+        width: 210px;
+        margin-top: 50px;
+        border-radius: 50%;
+    }
+
+    /* games */
+    #wide-screen #games {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        background-image: url(assets/background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+
+    #wide-screen #games .game-container {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 80px;
+        width: 280px;
+        height: 300px;
+        background-color: rgba(86, 71, 71, 0.756);
+        justify-content: space-evenly;
+    }
+    
+    #wide-screen #games .game-container h1 {
+        text-align: center;
+        padding: 3%;
+        font-family: Zing; font-size: 25px; color:  rgb(0, 0, 0);
+    }
+
+    #wide-screen #games .game-container h3 {
+        font-size: 16px;
+    }
+    
+    #wide-screen #games .game-container img {
+        width: 190px;
+        padding-top: 10px;
+    }
+
+    .burger {
+        text-align: center;
+        margin-left: 4px;
+        width: 36px;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .close {
+        width: 20px;
+        height: 20px;
+        margin-top: 10px;
+        margin-right: 10%;
+    }
+
+    #wide-screen .menu {
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background-color: #4c75db;
+        z-index: 199;
+        display: block;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    #wide-screen .menu h1 {
+        font-family: ZingBG;
+        color: white;
+        font-size: 30px;
+        margin-left: 10%;
+    }
+
+    #wide-screen .menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    #wide-screen #main #front {
+        font-family: Zing;
+        color: #fff;
+        font-size: 100px;
+        z-index: 2;
+        margin-top: 70px;
+    }
+    
+    
+    #wide-screen #main #bg {
+        position: absolute;
+        font-family: ZingBG;
+        font-size: 95px;
+        margin-left: 50px;
+        margin-top: 79px;
+        color: #ffffff41;
+    }
+    
+    #wide-screen #main .button {
+        display: flex;
+        width: 300px;
+        height: 100px;
+        background-color: rgb(203, 213, 224);
+        position: absolute;
+        margin-top: 350px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        -webkit-box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        -moz-box-shadow: 24px 10px 30px 5px rgba(94,104,155,0.75);
+        cursor: pointer;
+    }
+
+    /* home */
+    #wide-screen #home {
+        position: relative;
+        display: flex;
+        background: url(assets/bghome.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 130vh;
+    }
+    
+    #wide-screen #home .img1 {
+        text-align: center;
+    }
+    
+    #wide-screen #home .text {
+        margin-top: 3%;
+        position: relative;
+        text-align: center;
+    }
+    
+    #wide-screen #home .text h1{
+        font-family: ZingBG;
+        font-size: 40px;
+    }
+    
+    #wide-screen #home .h2 {
+        margin-top: 5%; 
+        font-size: 30px;
+        font-family: Poppins;
+        font-weight: bolder;
+        color: white;
+    }
+    
+    #wide-screen #home .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 120px;
+        margin-left: 100px;
+    }
+    
+    #wide-screen #home .box1, #wide-screen #home .box2 {
+        margin-top: 50px;
+        align-items: center;
+        text-align: center;
+        width: 310px;
+        height: 410px;
+        background-image: url(assets/profile\ bg.jpg);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    
+    #wide-screen #home .profile {
+        width: 210px;
+        margin-top: 50px;
+        border-radius: 50%;
+    }
+
+    .burger {
+        text-align: center;
+        margin-left: 4px;
+        width: 36px;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .close {
+        width: 20px;
+        height: 20px;
+        margin-top: 10px;
+        margin-right: 10%;
+    }
+
+    #wide-screen .menu {
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background-color: #4c75db;
+        z-index: 199;
+        display: block;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    #wide-screen .menu h1 {
+        font-family: ZingBG;
+        color: white;
+        font-size: 30px;
+        margin-left: 10%;
+    }
+
+    #wide-screen .menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+    }
+}
+
