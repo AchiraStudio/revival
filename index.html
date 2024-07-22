@@ -6,149 +6,310 @@
     <title>Revival (Demo)</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div id="wide-screen">
-        <div id="info">
-            <div id="one" class="window" >
-                <h1>Revival (Demo)</h1>
-                <h1>Sports</h1>
-                <h2 onclick="signUp()" style="cursor: pointer;">Tertarik? Jadilah Bintang Kita!</h2>
-                <h3 onclick="hideInfo()"style="cursor: pointer;">Close</h3>
-            </div>
-            <div id="two" class="window">
-                <h1>Revival (Demo)</h1>
-                <h1>E-Sports</h1>
-                <h2 onclick="signUp()" style="cursor: pointer;">Tertarik? Jadilah Bintang Kita!</h2>
-                <h3 onclick="hideInfo()" style="cursor: pointer;">Close</h3>
-            </div>
-            <div id="three" class="window">
-                <h1>Revival (Demo)</h1>
-                <h1>Music</h1>
-                <h2 onclick="signUp()" style="cursor: pointer;">Tertarik? Jadilah Bintang Kita!</h2>
-                <h3 onclick="hideInfo()" style="cursor: pointer;">Close</h3>
-            </div>
-            <div id="four" class="window">
-                <h1>Revival (Demo)</h1>
-                <h1>Other</h1>
-                <h2 onclick="signUp()" style="cursor: pointer;">Tertarik? Jadilah Bintang Kita!</h2>
-                <h3 onclick="hideInfo()" style="cursor: pointer;">Close</h3>
-            </div>
-        </div>
         <header class="header">
-            <a href="#main" class="logo">REVIVAL</a>
-
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <div class="dropdown">
-                    <a href="#games" style="z-index: 110;">Competitions</a>
-                    <div class="dropdown-content">
-                        <a href="extra/unavailable.html">Schedule</a>
-                        <a href="extra/unavailable.html">Results</a>
-                    </div>
-                </div>
-                <a href="#shop">Shop</a>
-                <a href="#footer">Contacts</a>
+            <div class="header-container">
+              <img src="assets/revival.png" alt="disco" id="disco">
+              <div class="brand"></div>
+              <label class="burger" for="burger">
+                <input type="checkbox" id="burger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>      
+            </div>
+            <nav id="nav-menu">
+              <button class="close-btn" onclick="toggleMenu()">Close</button>
+              <a href="#main">Home</a>
+              <a href="#about">About Us</a>
+              <a href="#games">Recup</a>
+              <a href="#ticket">Tickets</a>
+              <h6>SMA Regina Pacis Bogor</h6>
             </nav>
+          </header>
 
-            <div id="dropdown">
-                <a href="#main">Revival</a>
-                <img src="assets/burger.png" alt="burger" class="burger">
+          <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                  <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+              </defs>
+            </svg>
+            <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+              <div class="interactive"></div>
             </div>
-        </header>
+          </div>
 
-        <div class="menu">
-            <div class="head">
-                <h1>Revival</h1>
-                <img src="assets/close.png" alt="close" class="close">
-            </div>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#games">Competitions</a>
-            <a href="#shop">Shop</a>
-            <a href="#footer">Contacts</a>
-            <a href="https://recisrevival.my.id/">Store</a>
-            <a href="#" style="margin-top: 50%; font-size: 14px;">(Masih Testing, bukan versi terakhir)</a>
-        </div>
         <div id="main">
-            <h1 id="front">Revival</h1>
-            <h1 id="bg">Revival</h1>
-
-            <div class="button" onclick="signUp()">
-                <h1>Join The Show</h1>
-              </div>
-        </div>
-        
-        <div id="home">
-
-            <div id="container">
-                <div class="img1">
+            <div id="clouds">
+                <div class="cloud x1"></div>
+                <!-- Time for multiple clouds to dance around -->
+                <div class="cloud x2"></div>
+                <div class="cloud x3"></div>
+                <div class="cloud x4"></div>
+                <div class="cloud x5"></div>
+            </div>
+            <div class="text-container">
+                <div class="container" id="container1">
                     <div class="text">
-                        <h1 onclick="webTeam()">Meet Our Leader</h1>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="container1">
-                        <div class="box1">
-                            <h2 class="h2">"Ketua Kita"</h2>
-                            <img src="assets/profile.png" alt="Vella" class="profile">
+                        <h1 id="front" onclick="showSurprise()">Revival</h1>
+                        <a href="#games" class="button">
+                            <button>
+                                <h1>R E C U P</h1>
+                                <div id="clip">
+                                    <div id="leftTop" class="corner"></div>
+                                    <div id="rightBottom" class="corner"></div>
+                                    <div id="rightTop" class="corner"></div>
+                                    <div id="leftBottom" class="corner"></div>
+                                </div>
+                                <span id="rightArrow" class="arrow"></span>
+                                <span id="leftArrow" class="arrow"></span>
+                            </button>
+                        </a>
+                        <div class="box">
+                            <div class="con">
+                                <h3>Opening Time</h3>
+                                <button class="boton-elegante">Explore</button>
+                            </div>
+                            <div class="con">
+                                <h3>Closing Time</h3>
+                                <button class="boton-elegante">Explore</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="container2">
-                        <div class="box2">
-                            <h2 class="h2">"Waket Kita"</h2>
-                            <img src="assets/profile.png" alt="Vella" class="profile">
-                        </div>
-                    </div>
-                </div>
+              </div>
+
+              <!-- <div class="container" id="container2">
+
+              </div> -->
             </div>
         </div>
 
-        <hr>
+        <div id="vmenu">
+            <div class="title">
+                <h1 class="color-title">LOOK AT THIS</h1>
+            </div>
+            <div class="wrapper">
+                <div class="container">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon">1</div>
+                            <div class="description">
+                                <h4>Competitions</h4>
+                                <p>Lihatlah kompetisi yang dapat kalian ikuti!</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c2" >
+                    <label for="c2" class="card">
+                        <div class="row">
+                            <div class="icon">2</div>
+                            <div class="description">
+                                <h4>Concerts</h4>
+                                <p>Pasti seru-seru acara nya!!!</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c3" >
+                    <label for="c3" class="card">
+                        <div class="row">
+                            <div class="icon">3</div>
+                            <div class="description">
+                                <h4>Ticket</h4>
+                                <p>Ayo! Bergabunglah dan nikmati ini bersama.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
 
         <div id="about">
-            <h1 style="margin-left: 10%; margin-top: 5%; position: absolute; font-family: ZingBG; font-size: 80px;">What is Revival?</h1>
-            <div id="container">
-                <div class="container" style="text-align: center;">
-                    <h1 class="h1">Ya Penjelasan lah</h1>
-                    <p class=".h2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem fuga perferendis praesentium, laborum ex voluptates quaerat minima vero. Impedit reiciendis eveniet, et nobis tempore beatae at ullam nihil labore possimus hic unde reprehenderit minima quidem. Quae vitae ad nesciunt quo quibusdam mollitia placeat odit corporis ipsum, alias exercitationem officia doloremque optio tempore quas aut hic possimus repudiandae tenetur et nemo sunt ullam, perferendis dolorum. Nisi quibusdam natus aliquid tempore harum veniam. Incidunt ducimus at harum neque corrupti, possimus cupiditate debitis voluptates voluptate nobis officiis inventore labore ea officia quisquam quaerat veritatis, quibusdam magni autem corporis error sit pariatur. Ea est ab ipsam aperiam nemo nisi suscipit illo! Asperiores exercitationem provident laboriosam repellat totam voluptatum, aut nobis error voluptas mollitia molestias, esse necessitatibus quod consequuntur ipsum! Sapiente doloribus esse, voluptate quam hic eos sit illum, saepe facilis iure maxime pariatur blanditiis soluta minus amet molestiae architecto magni in possimus ex distinctio tenetur. Quasi, corrupti eaque facilis veniam itaque blanditiis magni ex eligendi odit doloribus tempore magnam sequi similique impedit quaerat eos quisquam maxime. Cumque quos vero beatae obcaecati consequuntur repudiandae possimus, magnam aliquam corporis voluptate ab quo! Corrupti molestias quidem maxime doloremque excepturi illum nostrum, voluptatum architecto, tempore libero ab.</p>
+            <div class="container">
+                <div class="title">
+                    <h1 class="color-title">About Us</h1>
                 </div>
-                <h1></h1>
+                <div class="boxes">
+                    <div class="box" id="top">
+                        <img src="images/mam_nora.JPG" alt="mam" class="img-about">
+                        <div class="text">
+                            <h1> WELCOME TO REVIVAL</h1>
+                            <p>Selamat datang di website kami!  Kami bangga memperkenalkan diri sebagai bagian dari OSIS tahun ajaran 2023-2024. </p>
+                        </div>
+                    </div>
+                    <div class="box" id="first-m">
+                        <div class="text">
+                            <p> Tim kami mengelola platform ini untuk memberikan informasi terkini tentang "Pensi."  Baik Anda seorang pelajar, orang tua, atau anggota dewan guru, Anda akan menemukan sumber daya dan pembaruan berharga di sini.  </p>
+                        </div>
+                        <img src="images/panitia.JPG" alt="mam" class="img-about">
+                    </div>
+                    <div class="box" id="sec-m">
+                        <img src="images/sherryl.JPG" alt="mam" class="img-about">
+                        <div class="text">
+                            <p>Misi kami adalah memastikan bahwa setiap orang tetap mendapat informasi dan terhubung dengan kejadian dan peluang terkini dalam komunitas kami.</p>
+                        </div>
+                    </div>
+                    <div class="box" id="bottom">
+                        <div class="text">
+                            <p>Silahkan... Nikmatilah acara ini, ikuti semua kegiatan kami dengan penuh semangat. Kami sangat menantikan kedatangan kalian!</p>
+                            <p> Terima kasih telah berkunjung, dan kami harap situs web kami bermanfaat dan informatif!</p>
+                        </div>
+                        <img src="images/audience.JPG" alt="mam" class="img-about">
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="games">
-            <div class="game-container" onclick="showWindow1()">
-                <h1>Sports</h1>
-                <img src="assets/profile.png" alt="sports">
-                <h3 style="margin-top: 20px;">Basket, Bola, dll</h3>
+            <h1 class="color-title">Recup</h1>
+
+            <div class="slider">
+                <div class="item" id="5">
+                    <div class="tex-con">
+                     <div class="img">
+                        <img src="images/basketball-svgrepo-com.svg" alt="#" class="img"/>
+                     </div>
+                     <h3 style="text-align: center;">Basket</h3>
+                     <p style="font-size: 25px;">Become The Next Kobe. RIP GOAT</p>
+                    </div>
+                </div>
+                <div class="item" id="6">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/esport.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">E-Sport</h3>
+                        <p style="font-size: 25px;">Uchiha Kairi. Ayolah Onic menang M6</p>
+                       </div>
+                </div>
+                <div class="item" id="7">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/drumset.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Band</h3>
+                        <p style="font-size: 25px;">"Entah dimana... Diriku.. Berada..</p>
+                       </div>
+                </div>
+                <div class="item " id="8">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/volley.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Volley</h3>
+                        <p style="font-size: 25px;">Smash, Block, Pass.. SERVISSS</p>
+                       </div>
+                </div>
+                <div class="item " id="1">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/football.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Futsal</h3>
+                        <p style="font-size: 25px;">"Messi! Ankara Messi.... Ankara Messi... Messi... Messi.. GOLLLLLL!!!! SIUUUUU"</p>
+                       </div>
+                </div>
+                <div class="item " id="2">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/dance.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Modern Dance</h3>
+                        <p style="font-size: 25px;">"Lisa, can you teach me Japanese?" I said "Hait, Hait"</p>
+                       </div>
+                </div>
+                <div class="item " id="3">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/debate.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">English Debate</h3>
+                        <p style="font-size: 25px;">Donald Trump Vs Joe Biden</p>
+                       </div>
+                </div>
+                <div class="item " id="4">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/paintbrush.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Poster</h3>
+                        <Leonardo style="font-size: 25px;">Leonardo Di Caprio</p>
+                       </div>
+                </div>
+                <button id="next">></button>
+                <button id="prev"><</button>
             </div>
-            <div class="game-container" onclick="showWindow2()">
-                <h1>E-Sports</h1>
-                <img src="assets/profile.png" alt="sports">
-                <h3 style="margin-top: 20px;">Game mobile</h3>
+        </div>
+
+        <div id="concert">
+            <div class="display" id="ot">
+                <div class="title">
+                    <h1>Opening</h1>
+                    <h1>Time</h1>
+                </div>
+                <div class="img" id="artis-open">
+
+                </div>
+                <div class="info">
+                    <h2>Time : 08.00 WIB</h2>
+                    <h2>Location : Lapangan SMA Regina Pacis</h2>
+                </div>
             </div>
-            <div class="game-container" onclick="showWindow3()">
-                <h1>Music</h1>
-                <img src="assets/profile.png" alt="sports">
-                <h3 style="margin-top: 20px;">Band, nyanyi, dll</h3>
+            <div class="display" id="ct">
+                <div class="title">
+                    <h1>Closing</h1>
+                    <h1>Time</h1>
+                </div>
+                <div class="img" id="artis-close">
+                    
+                </div>
+                <div class="info">
+                    <h2>Time : 08.00 WIB</h2>
+                    <h2>Location : Lapangan SMA Regina Pacis</h2>
+                </div>
             </div>
-            <div class="game-container" onclick="showWindow4()">
-                <h1>(gatau)</h1>
-                <img src="assets/profile.png" alt="sports">
-                <h3 style="margin-top: 20px;">Apa gitu</h3>
+        </div>
+
+        <div id="schedule">
+            <div class="title">
+                <h1 class="color-title"> Schedule </h1>
+            </div>
+            <div class="sche">
+
             </div>
         </div>
 
         <div id="shop">
-            <h1 style="padding-top: 10px; font-family: Zing; font-size: 45px; color:  white;">Buy Our Merch!</h1>
-            <div class="container">
-                <img src="assets/bracelet red.png" alt="1">
-                <img src="assets/bracelet blue.png" alt="2">
-                <img src="assets/bracelet green.png" alt="3">
-                <h1 onclick="ticketWeb()" style="font-family: ZingBG; font-size: 50px; cursor: pointer;" class="h1">Get Yours Now!!!</h1>
+            <div class="title">
+                <h1 class="color-title">BELU YUK!!</h1>
+            </div>
+
+            <div class="items">
+                <div class="img-container">
+                    <img src="assets/bracelet blue.png" alt="blue">
+                    <img src="assets/bracelet red.png" alt="green">
+                    <img src="assets/bracelet green.png" alt="red">
+                </div>
+            </div>
+            <div class="button">
+                <a class="fancy" href="#">
+                    <span class="top-key"></span>
+                    <span class="text">Buy Tickets</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                  </a>
             </div>
         </div>
 
@@ -161,13 +322,10 @@
                 <div id="footer-links">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="#main">Main Screen</a></li>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#main">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#games">Competitions</a></li>
                         <li><a href="#tickets">Shop</a></li>
-                        <li><a href="#footer">Contacts</a></li>
-                        <li><a href="https://recisrevival.my.id/">Store</a></li>
                     </ul>
                 </div>
                 <div id="footer-follow">
@@ -179,19 +337,36 @@
                 </div>
                 <div id="footer-contact">
                     <h2>Contact Us</h2>
-                    <p>Email: nathanplayz806@gmail.com</p>
-                    <p>Phone: +62-878-9702-5720</p>
+                    <p>Email: info@reginapacis.sch.id</p>
+                    <p>Phone: +62 813-7657-7324</p>
                     <p>Address: SMA Regina Pacis Bogor</p>
                 </div>
             </div>
             <div id="footer-bottom">
                 <p>&copy; 2024 Revival. All rights reserved.</p>
+                <p>Achira Studios</p>
             </div>
         </footer>         
     </div>
 
-    <script src="dropdown.js"></script>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
     <script src="https://kit.fontawesome.com/0684572857.js" crossorigin="anonymous"></script>
 </body>
 </html>
